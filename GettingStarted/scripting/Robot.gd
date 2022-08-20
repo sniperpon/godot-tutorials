@@ -56,5 +56,6 @@ func _on_Button_pressed():
 
 # This event handler takes care of the timer expiring
 func _on_Timer_timeout():
-	take_damage(1)
-	print("Health:" + String(health))
+	if health > 0:
+		take_damage(1)
+		print("Health:" + String(health))
